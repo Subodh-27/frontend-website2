@@ -247,10 +247,34 @@ a:active {
 
 .contact__fieldset {
   border: none;
+  padding: 20px;
 }
 
 .contact__p {
-  margin: 1em 0;
+  position: relative;
+  margin: 30px;
+}
+.contact__label1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 8px;
+  padding-left: 15px;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.contact__p input:focus ~ label,
+.contact__p input:valid ~ label {
+  top: -30px;
+  left: 0;
+  padding: 0px;
+}
+
+.contact__input {
+  color: var(--FONT-COLOR);
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .contact__label {
@@ -264,6 +288,12 @@ a:active {
   border-radius: var(--BORDER-RADIUS);
   border-width: 2px;
   width: 100%;
+}
+
+.contact__fieldset input:focus ~ label,
+.contact__fieldset input:valid ~ label {
+  top: -20px;
+  left: 0;
 }
 
 .contact__button {
